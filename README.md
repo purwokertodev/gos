@@ -36,7 +36,7 @@ g := gos.New(`\%$()}&"':`, true, true, true)
 ```
 
 - First Parameter `\%$()}&"':` : Allowed input to your string
-- Second Parameter `boolean` : Allow empty to your string, whic mean your input can be empty ("")
+- Second Parameter `boolean` : Allow empty to your string, which mean your input can be empty ("")
 - Third Parameter `boolean` : Allow Number to your string
 - Fourth Parameter `boolean` : Allow Alpabetical to your string
 
