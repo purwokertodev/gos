@@ -14,7 +14,15 @@ func TestGos(t *testing.T) {
 func TestSpecialCharInput(t *testing.T) {
 	g := New(`~!@#$%^&*()_+=-`, true, false, false)
 	e := g.Validate(`&*`)
+	if e == nil {
+		t.Log("test special char run as expected")
+	}
+}
+
+func TestSpecialCharInvalidInput(t *testing.T) {
+	g := New(`~!@#$%^&*()_+=-`, true, false, false)
+	e := g.Validate(`&*:`)
 	if e != nil {
-		t.Error("test special char run as expected")
+		t.Log("test special char with invalid input")
 	}
 }
