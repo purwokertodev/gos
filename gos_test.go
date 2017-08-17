@@ -6,7 +6,7 @@ import (
 
 func TestGos(t *testing.T) {
 	g := New(`~!@#$%^&*()_+=-`, true, true, true)
-	if g.allowEmpty{
+	if g != nil {
 		t.Log("success create gos")
 	}
 }

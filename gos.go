@@ -23,8 +23,8 @@ type gos struct {
 	allowAlpha bool
 }
 
-func New(allowedInput string, allowEmpty, allowNumber, allowAlpha bool) gos {
-	return gos{
+func New(allowedInput string, allowEmpty, allowNumber, allowAlpha bool) *gos {
+	return &gos{
 		allowedInput,
 		allowEmpty,
 		allowNumber,
@@ -32,7 +32,7 @@ func New(allowedInput string, allowEmpty, allowNumber, allowAlpha bool) gos {
 	}
 }
 
-func (g gos) Validate(input string) error {
+func (g *gos) Validate(input string) error {
 	var inputs []string
 	var allowedInput string
 
