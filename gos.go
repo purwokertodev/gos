@@ -58,7 +58,6 @@ func (g gos) Validate(input string) error {
 	} else if !g.allowEmpty && g.allowNumber && !g.allowAlpha {
 		ai = fmt.Sprintf(`^[%s%s ]+$`, number, allowedInput)
 	} else {
-		fmt.Println("here")
 		ai = fmt.Sprintf(`^[%s%s ]+$`, number, allowedInput)
 	}
 	check := regexp.MustCompile(ai).MatchString
